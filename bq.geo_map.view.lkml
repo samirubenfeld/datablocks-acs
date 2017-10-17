@@ -141,11 +141,11 @@ view: bq_logrecno_bg_map {
     suggest_persist_for: "120 hours"
   }
 
-#   measure: count_tract {
-#     type:  count_distinct
-#     sql: ${tract_name} ;;
-#     drill_fields: [tract_name, data.default_drills*,  count_block]
-#   }
+  measure: count_tract {
+    type:  count_distinct
+    sql: ${tract_name} ;;
+    drill_fields: [tract_name, data.default_drills*,  count_block]
+  }
 
   # Block Group
 
@@ -189,14 +189,14 @@ view: bq_logrecno_bg_map {
     value_format_name: decimal_2
   }
 
-#   measure: count_block {
-#     type:  count_distinct
-#     sql: ${block_group} ;;
-#     drill_fields: [tract_name, data.default_drills*]
-#   }
-#
-#
-#   set: geo_drills {
-#     fields: [count_state, count_county, count_tract, block_group]
-#   }
+  measure: count_block {
+    type:  count_distinct
+    sql: ${block_group} ;;
+    drill_fields: [tract_name, data.default_drills*]
+  }
+
+
+  set: geo_drills {
+    fields: [count_block, block_group]
+  }
 }

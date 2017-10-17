@@ -23,8 +23,8 @@ map_layer: block_group {
   url: "https://a.tiles.mapbox.com/v4/dwmintz.4mqiv49l/{z}/{x}/{y}.mvt?access_token=pk.eyJ1IjoiZHdtaW50eiIsImEiOiJjajFoemQxejEwMHVtMzJwamw4OXprZWg0In0.qM9sl1WAxbEUMVukVGMazQ"
   feature_key: "us_block_groups_simple-c0qtbp"
   extents_json_url: "https://cdn.rawgit.com/dwmintz/census_extents2/59fa2cd8/bg_extents.json"
-  min_zoom_level: 9
-  max_zoom_level: 14
+#   min_zoom_level: 9
+  max_zoom_level: 12
   property_key: "GEOID"
 }
 

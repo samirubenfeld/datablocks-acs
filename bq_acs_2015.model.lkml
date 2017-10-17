@@ -7,6 +7,10 @@ include: "*.dashboard.lookml"  # include all dashboards in this project
 include: "bq.*.view.lkml"
 
 
+
+explore: bq_tract_zcta_map {}
+
+
 explore: fast_facts {
   from: bq_logrecno_bg_map
 
