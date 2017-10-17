@@ -88,11 +88,11 @@ view: bq_logrecno_bg_map {
     suggest_persist_for: "120 hours"
   }
 
-#   measure: count_state {
-#     type:  count_distinct
-#     sql: ${state_name} ;;
-#     drill_fields: [state_name, data.default_drills*, count_county, count_tract, count_block]
-#   }
+  measure: count_state {
+    type:  count_distinct
+    sql: ${state_name} ;;
+    drill_fields: [state_name, data.default_drills*, count_county, count_tract, count_block]
+  }
 
   # County
 
@@ -115,11 +115,11 @@ view: bq_logrecno_bg_map {
     suggest_persist_for: "120 hours"
   }
 
-#   measure: count_county {
-#     type:  count_distinct
-#     sql: ${county_name} ;;
-#     drill_fields: [county_name,  data.default_drills*,  count_tract, count_block,]
-#   }
+  measure: count_county {
+    type:  count_distinct
+    sql: ${county_name} ;;
+    drill_fields: [county_name,  data.default_drills*,  count_tract, count_block,]
+  }
 
   # Tract
 
