@@ -10,6 +10,6 @@ view: bq_zipcode_income_facts {
   }
   dimension: ZCTA5 {}
   dimension: income_household {
-    hidden: yes
+    hidden: no
   }
   }
