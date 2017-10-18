@@ -118,7 +118,7 @@ view: bq_logrecno_bg_map {
   measure: count_county {
     type:  count_distinct
     sql: ${county_name} ;;
-    drill_fields: [county_name,  data.default_drills*,  count_tract, count_block,]
+    drill_fields: [county_name,  data.default_drills*,  count_tract, count_block]
   }
 
   # Tract
