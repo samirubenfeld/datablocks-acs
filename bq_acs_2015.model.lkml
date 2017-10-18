@@ -12,6 +12,26 @@ explore: bq_tract_zcta_map {}
 
 explore: bq_zipcode_income_facts {}
 
+map_layer: block_group {
+  format: "vector_tile_region"
+  url: "https://a.tiles.mapbox.com/v4/dwmintz.4mqiv49l/{z}/{x}/{y}.mvt?access_token=pk.eyJ1IjoiZHdtaW50eiIsImEiOiJjajFoemQxejEwMHVtMzJwamw4OXprZWg0In0.qM9sl1WAxbEUMVukVGMazQ"
+  feature_key: "us_block_groups_simple-c0qtbp"
+  extents_json_url: "https://cdn.rawgit.com/dwmintz/census_extents2/59fa2cd8/bg_extents.json"
+#   min_zoom_level: 9
+  max_zoom_level: 12
+  property_key: "GEOID"
+}
+
+map_layer: tract {
+  format: "vector_tile_region"
+  url: "https://a.tiles.mapbox.com/v4/dwmintz.3zfb3asw/{z}/{x}/{y}.mvt?access_token=pk.eyJ1IjoiZHdtaW50eiIsImEiOiJjajFoemQxejEwMHVtMzJwamw4OXprZWg0In0.qM9sl1WAxbEUMVukVGMazQ"
+  feature_key: "us_tracts-6w08eq"
+  extents_json_url: "https://cdn.rawgit.com/dwmintz/census_extents2/396e32db/tract_extents.json"
+  min_zoom_level: 6
+  max_zoom_level: 12
+  property_key: "GEOID"
+}
+
 # explore: fast_facts {
 #   from: bq_logrecno_bg_map
 
