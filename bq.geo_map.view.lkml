@@ -161,6 +161,19 @@ view: bq_logrecno_bg_map {
     suggest_persist_for: "120 hours"
   }
 
+
+  dimension: block_group_2 {
+    sql: SUBSTR(${TABLE}.geoid, 8, 12);;
+    group_label: "Block Group"
+    label: "Block Group Geo Code 2"
+    map_layer_name: block_group_alt
+    link: {
+      url: "https://google.com?q={{value}}"
+      label: "Google"
+    }
+    suggest_persist_for: "120 hours"
+  }
+
   dimension: block_group_name {
     sql: CONCAT(${TABLE}.block_group_name, ', ', ${tract_name}) ;;
     group_label: "Block Group"

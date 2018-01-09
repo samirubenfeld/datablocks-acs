@@ -32,6 +32,11 @@ map_layer: tract {
 }
 
 
+map_layer: block_group_alt {
+  url: "https://gist.githubusercontent.com/sarubenfeld/a68d68c32417128ceac5def5f20057c2/raw/422b1be275e42cb7909b2cf47d39634d9c2694ac/tl_2010_36_bg10.json"
+  property_key: "GEOID10"
+}
+
 explore: gsod {
   from: bq_gsod
   join: zipcode_station {
